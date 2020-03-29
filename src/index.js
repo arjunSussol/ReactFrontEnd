@@ -1,9 +1,10 @@
-import _ from 'lodash';
+import React from "react";
+import ReactDOM from "react-dom";
 
-function component(){
-    const element = document.createElement('div');
-    element.innerHTML=_.join(['Hello', 'Webpack'], ' ');
-    return element;
-}
+class Welcome extends React.Component{
+    render(){
+        return <h1>Welcome to React Front-end</h1>
+    }
+};
 
-document.body.appendChild(component());
+ReactDOM.render(<Welcome/>, document.getElementById('root'));
