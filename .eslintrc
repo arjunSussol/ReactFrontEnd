@@ -1,0 +1,59 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "import/prefer-default-export": "off",
+        "jsx-boolean-value": "off",
+        "object-shorthand": "off",
+        "no-return-assign": "off",
+        "react/jsx-filename-extension": [
+            2,
+            {
+              "extensions": [
+                ".js",
+                ".jsx"
+              ]
+            }
+          ],
+          "react/forbid-prop-types": [
+            0
+          ],
+          "react/require-default-props": [
+            0
+          ],
+          "global-require": [
+            0
+          ],
+        "react/prop-types": [
+            2,
+            { "ignore": ["customValidators"] }
+          ],
+          "react/prefer-stateless-function": "off",
+          "quote-props": "off",
+          "no-console": "off",
+          "max-len": "off",
+            "init-declarations": "off",
+        "no-inline-comments": "off"
+    }
+}

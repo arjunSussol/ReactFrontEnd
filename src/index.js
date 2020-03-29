@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Welcome extends React.Component {
   render() {
-    return <h1>Welcome to React Front-end</h1>
+    return (
+      <div>
+        <h1>Welcome to React Front-end</h1>
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<Welcome />, document.getElementById('root'))
+ReactDOM.render(<Welcome />, document.getElementById('root'));
