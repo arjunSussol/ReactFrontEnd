@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode=development",
+    "start": "webpack serve --mode=development",
     "build": "webpack",
     "format": "prettier --write \"src/**/*.(js|jsx)\"",
     "lint": "eslint .",
@@ -30,9 +30,9 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "prettier": "2.0.2",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "lodash": "^4.17.19",
