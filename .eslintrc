@@ -5,9 +5,9 @@
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
