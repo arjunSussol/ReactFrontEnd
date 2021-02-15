@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, './build'),
   },
 
   plugins: [
@@ -21,6 +21,11 @@ module.exports = {
       template: path.resolve(__dirname, 'index.html'),
     }),
   ],
+
+  devServer: {
+    contentBase: path.resolve(__dirname, './build'),
+    port: 9000,
+  },
 
   module: {
     rules: [{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }],

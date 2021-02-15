@@ -3,6 +3,6 @@
 # Ignore files compiled from TypeScript and CoffeeScript
 **/*.{ts,coffee}.js
 
-# Ignore built files except build/index.js
-dist/
-!dist/index.js
+# Ignore built files except build/bundle.js
+build/
+!build/bundle.js
