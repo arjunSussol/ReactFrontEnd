@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -20,14 +21,28 @@ module.exports = {
       title: 'React Boilerplate',
       template: path.resolve(__dirname, 'index.html'),
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   devServer: {
     contentBase: path.resolve(__dirname, './build'),
     port: 9000,
+    hot: true,
   },
 
   module: {
-    rules: [{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }],
+    rules: [
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        // Loading css
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        // Loading images
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+    ],
   },
 };

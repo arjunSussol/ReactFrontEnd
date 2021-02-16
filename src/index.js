@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './index.css';
+
 class Welcome extends React.Component {
   render() {
     return (
@@ -12,3 +14,5 @@ class Welcome extends React.Component {
 }
 
 ReactDOM.render(<Welcome />, document.getElementById('root'));
+
+module.hot.accept();
