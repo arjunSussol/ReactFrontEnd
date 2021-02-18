@@ -32,6 +32,11 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
       { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
         // Loading css

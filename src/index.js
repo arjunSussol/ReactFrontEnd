@@ -2,17 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
+import App from './App';
 
-class Welcome extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Welcome to React Boilerplate</h1>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<Welcome />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 module.hot.accept();
